@@ -68,6 +68,7 @@ export class LoginComponent {
         this.currentUser = res;
         if (this.currentUser.user.role === "admin") {
           document.cookie = `token=${this.currentUser.token}`;
+          console.log(document.cookie);
           setTimeout(function () {
             window.location.href = "https://kotopedia-admin-ui-blue.vercel.app/";
           }, 2000)
